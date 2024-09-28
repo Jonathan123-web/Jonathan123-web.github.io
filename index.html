@@ -58,7 +58,7 @@
     <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
     <section>
         <div class="chart-description">
-            <h2>Section 1: A basic chart</h2>
+            <h2>Challenge 1: Example Graph 1</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
                 We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
                 As a first example, we're using a basic chart from our repo.
@@ -95,7 +95,7 @@
 
 <section>
     <div class="chart-description">
-        <h2>Section 2: A basic chart</h2>
+        <h2>Example Graph 2</h2>
         <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
             We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
             As a first example, we're using a basic chart from our repo.
@@ -120,7 +120,7 @@
 
 <section>
     <div class="chart-description">
-        <h2>Section 3: A basic chart</h2>
+        <h2>Example Graph 3</h2>
         <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
             We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
             As a first example, we're using a basic chart from our repo.
@@ -142,6 +142,54 @@
 
 
 
+
+<section>
+    <div class="chart-description">
+        <h2>Challenge 2: Edited Graph 1</h2>
+        <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            The Following graphs are created in Economic Observatory Data Hub.
+        </p>
+        <p2>Weekly wage in Canada 2000-2024
+
+        </p2>
+    </div>
+    <figure id="Location4"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+</section>
+
+
+<script>
+    // This is a comment in JavaScript - it's a different language to HTML and CSS
+
+    let figure_4_spec = "week2.json"; // We're storing the URL of the graph we want to display in a variable
+                                                                                                                // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+
+    vegaEmbed('#Location4', figure_4_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+
+    </script>
+
+
+
+
+<section>
+    <div class="chart-description">
+        <h2>Edited Graph 2</h2>
+        <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            Unemployment rate in France 1975-2023
+        </p>
+    </div>
+    <figure id="Location5"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+</section>
+
+
+<script>
+    // This is a comment in JavaScript - it's a different language to HTML and CSS
+
+    let figure_5_spec = "week2(1).json"; // We're storing the URL of the graph we want to display in a variable
+                                                                                                                // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+
+    vegaEmbed('#Location5', figure_5_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+
+    </script>
 </body>
     
 </html>
