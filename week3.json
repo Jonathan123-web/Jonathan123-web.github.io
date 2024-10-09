@@ -1,0 +1,48 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": {
+      "text": "Percentage of UK teens not receiving higher education",
+      "anchor": "start",
+      "subtitle": "percentage%",
+      "fontSize": "14",
+      "subtitleFontSize": "12",
+      "color": "#000000",
+      "subtitleColor": "#000000"
+    },
+    "description": "Line chart with conditional axis ticks, labels, and grid.",
+    "data": {
+      "url": "https://raw.githubusercontent.com/Jonathan123-web/Jonathan123-web.github.io/refs/heads/main/uk_teens_not_in_education_work_training_percentage.csv"
+    },
+    "width": 400,
+    "mark": "line",
+    "encoding": {
+      "x": {
+        "field": "date",
+        "type": "temporal",
+        "axis": {
+          "tickCount": 8,
+          "labelAlign": "left",
+          "labelExpr": "[timeFormat(datum.value, '%b'), timeFormat(datum.value, '%m') == '01' ? timeFormat(datum.value, '%Y') : '']",
+          "labelOffset": 4,
+          "labelPadding": -24,
+          "tickSize": 10,
+          "gridDash": {
+            "condition": {
+              "test": {"field": "value", "timeUnit": "month", "equal": 1},
+              "value": []
+            },
+            "value": [2, 2]
+          },
+          "tickDash": {
+            "condition": {
+              "test": {"field": "value", "timeUnit": "month", "equal": 1},
+              "value": []
+            },
+            "value": [2, 2]
+          }
+        }
+      },
+      "y": {"field": "value", "type": "quantitative"}
+    },
+    "config": {"axis": {"domainColor": "#ddd", "tickColor": "#ddd"}}
+  }

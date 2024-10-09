@@ -190,6 +190,51 @@
     vegaEmbed('#Location5', figure_5_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
 
     </script>
+
+
+
+
+<section>
+    <div class="chart-description">
+        <h2>Challenge 3: Supporting arguments</h2>
+        <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+            One of the arguments at the inequality talk: there is an increase in education level but falling in-work trainings and very few job opportunities for those who have not studied in university.
+        </p>
+    </div>
+    <figure id="Location6"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+</section>
+
+
+<script>
+    // This is a comment in JavaScript - it's a different language to HTML and CSS
+
+    let figure_6_spec = "week3.json"; // We're storing the URL of the graph we want to display in a variable
+                                                                                                                // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+
+    vegaEmbed('#Location6', figure_6_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+
+    </script>
+
+    <section>
+        <p>
+            From the graph created, we can see that the percentage of teens not receiving higher education has fallen from 16% to around 11% 2010-2019.
+        </p>
+    </section>
+
+
+    <section>
+        <p>
+            Here we have a graph showing the unemployment rate of teens at age 18. The percentage has increased from 16% to 22.5% in just 3 years (2018-2020). This shows that it has become more and more difficult for those who have not studied in university to find a job.
+        </p>
+        <figure id="Location7"></figure>
+    </section>
+
+
+<script>
+    let figure_7_spec = "week3(1).json"
+
+    vegaEmbed('#Location7', figure_7_spec)
+</script>
 </body>
     
 </html>
