@@ -1,0 +1,95 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Revenue: At-home vs Out-of-home Consumption (2018-2023)",
+  "width": 350,
+  "height": 350,
+  
+  "data": {
+    "values": [
+      {"year": 2018, "revenue_at_home": 266.13, "revenue_out_home": 575.2},
+      {"year": 2019, "revenue_at_home": 265.19, "revenue_out_home": 593.7},
+      {"year": 2020, "revenue_at_home": 284.13, "revenue_out_home": 468.1},
+      {"year": 2021, "revenue_at_home": 316.05, "revenue_out_home": 564},
+      {"year": 2022, "revenue_at_home": 310.2, "revenue_out_home": 597.5},
+      {"year": 2023, "revenue_at_home": 318.8, "revenue_out_home": 630.8}
+    ]
+  },
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative", "title": "Year"},
+        "y": {
+          "field": "revenue_at_home",
+          "type": "quantitative",
+          "title": "Revenue ($)"
+        },
+        "color": {"value": "blue"},
+        "tooltip": [
+          {"field": "year", "title": "Year"},
+          {"field": "revenue_at_home", "title": "At-home Revenue ($)"}
+        ]
+      }
+    },
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "y": {"field": "revenue_out_home", "type": "quantitative"},
+        "color": {"value": "red"},
+        "tooltip": [
+          {"field": "year", "title": "Year"},
+          {"field": "revenue_out_home", "title": "Out-of-home Revenue ($)"}
+        ]
+      }
+    },
+    {
+      "mark": {"type": "circle", "size": 100},
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "y": {"field": "revenue_at_home", "type": "quantitative"},
+        "color": {"value": "blue"},
+        "tooltip": [
+          {"field": "year", "title": "Year"},
+          {"field": "revenue_at_home", "title": "At-home Revenue ($)"}
+        ]
+      },
+      "selection": {
+        "highlight_at_home": {
+          "type": "single",
+          "fields": ["year"],
+          "on": "mouseover",
+          "empty": "none"
+        }
+      }
+    },
+    {
+      "mark": {"type": "circle", "size": 100},
+      "encoding": {
+        "x": {"field": "year", "type": "quantitative"},
+        "y": {"field": "revenue_out_home", "type": "quantitative"},
+        "color": {"value": "red"},
+        "tooltip": [
+          {"field": "year", "title": "Year"},
+          {"field": "revenue_out_home", "title": "Out-of-home Revenue ($)"}
+        ]
+      },
+      "selection": {
+        "highlight_out_home": {
+          "type": "single",
+          "fields": ["year"],
+          "on": "mouseover",
+          "empty": "none"
+        }
+      }
+    }
+  ],
+  "encoding": {
+    "color": {
+      "field": "type",
+      "type": "nominal",
+      "legend": {"title": "Revenue Type", "values": ["At-home", "Out-of-home"]}
+    }
+  },
+  "config": {}
+}

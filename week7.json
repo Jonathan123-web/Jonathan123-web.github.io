@@ -1,0 +1,105 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "United Kingdom",
+    "subtitle": ["10 selected cities and their populations", ""],
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "middle",
+    "color": "black"
+  },
+  "config": {"background": "white", "view": {"stroke": "transparent"}},
+  "width": 200,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/jhellingsdata/jhellingsdata.github.io/main/Data/UK%20Map%20Data/ITL3_2021_20m.geojson",
+    "format": {"property": "features"}
+  },
+  "projection": {"type": "mercator"},
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "fill": "lightblue",
+        "stroke": "black",
+        "strokeWidth": 0.5
+      },
+      "encoding": {"tooltip": {"field": "properties.ITL321NM"}}
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "city": "London",
+            "latitude": 51.5074,
+            "longitude": -0.1278,
+            "population": 8776535
+          },
+          {
+            "city": "Birmingham",
+            "latitude": 52.4862,
+            "longitude": -1.8904,
+            "population": 1121408
+          },
+          {
+            "city": "Glasgow",
+            "latitude": 55.8642,
+            "longitude": -4.2518,
+            "population": 631690
+          },
+          {
+            "city": "Leeds",
+            "latitude": 53.8008,
+            "longitude": -1.5491,
+            "population": 536321
+          },
+          {
+            "city": "Liverpool",
+            "latitude": 53.4084,
+            "longitude": -2.9916,
+            "population": 506552
+          },
+          {
+            "city": "Edinburgh",
+            "latitude": 55.9533,
+            "longitude": -3.1883,
+            "population": 505310
+          },
+          {
+            "city": "Sheffield",
+            "latitude": 53.3811,
+            "longitude": -1.4701,
+            "population": 500552
+          },
+          {
+            "city": "Manchester",
+            "latitude": 53.4808,
+            "longitude": -2.2426,
+            "population": 470411
+          },
+          {
+            "city": "Bristol",
+            "latitude": 51.4545,
+            "longitude": -2.5879,
+            "population": 425232
+          },
+          {
+            "city": "Leicester",
+            "latitude": 52.6369,
+            "longitude": -1.1398,
+            "population": 406588
+          }
+        ]
+      },
+      "mark": {"type": "circle", "color": "red", "size": 100},
+      "encoding": {
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "tooltip": [
+          {"field": "city", "type": "nominal"},
+          {"field": "population", "type": "quantitative", "format": ",.0f"}
+        ]
+      }
+    }
+  ]
+}

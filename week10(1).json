@@ -1,0 +1,50 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "UK bank rate 2000-2010",
+    "subtitle": "rate %",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 300,
+  "height": 300,
+  "data": {
+    "values": [
+      {"year": 2000, "value": 6},
+      {"year": 2001, "value": 5.75},
+      {"year": 2002, "value": 4},
+      {"year": 2003, "value": 3.75},
+      {"year": 2004, "value": 4.25},
+      {"year": 2005, "value": 4.5},
+      {"year": 2006, "value": 4.75},
+      {"year": 2007, "value": 5.25},
+      {"year": 2008, "value": 5},
+      {"year": 2009, "value": 1.5},
+      {"year": 2010, "value": 0.5}
+    ]
+  },
+  "mark": {"type": "line", "color": "#00BFFF", "strokeWidth": 2, "opacity": 1},
+  "transform": [
+    {"filter": "datum.year >= minYear"},
+    {"filter": "datum.year <= maxYear"}
+  ],
+  "params": [
+    {
+      "name": "minYear",
+      "value": 2000,
+      "bind": {"input": "text", "name": "Start year: "}
+    },
+    {
+      "name": "maxYear",
+      "value": 2010,
+      "bind": {"input": "text", "name": "End year: "}
+    }
+  ],
+  "encoding": {
+    "x": {"field": "year", "type": "quantitative", "title": "Year"},
+    "y": {"field": "value", "type": "quantitative", "title": "Rate"}
+  },
+  "config": {}
+}

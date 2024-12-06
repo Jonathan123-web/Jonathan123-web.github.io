@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Soft Drink Sales in the US (2018-2023)",
+  "width": 350,
+  "height": 350,
+  "data": {
+    "values": [
+      {"year": 2018, "sales": 88.4},
+      {"year": 2019, "sales": 88.64},
+      {"year": 2020, "sales": 95.45},
+      {"year": 2021, "sales": 106.51},
+      {"year": 2022, "sales": 104.94},
+      {"year": 2023, "sales": 108.39}
+    ]
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {"field": "year", "type": "ordinal", "title": "Year"},
+    "y": {
+      "field": "sales",
+      "type": "quantitative",
+      "title": "Sales ($ Billion)"
+    },
+    "tooltip": [
+      {"field": "year", "title": "Year"},
+      {"field": "sales", "title": "Sales ($ Billion)"}
+    ]
+  },
+  "config": {}
+}

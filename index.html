@@ -48,20 +48,19 @@
     </h1>
     <p style="margin-top: 0px; color: darkblue">
         <!-- we're setting the margin to 0px so the header and authour name are close together -->
-        LapWan | <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/">LinkedIn</a> | <a
+        LapWan | <a href="https://jonathan123-web.github.io/Project">Project</a> | <a
             href="https://github.com/Jonathan123-web/Jonathan123-web.github.io">GitHub</a>
     </p>
     <h3 class="small"> <!-- We have added a class to the header called "small" which we can use to style it in the CSS -->
-        This page acts as your portfolio of charts. You can use it as a good starting point to display your work but make sure to customise it to make it your own, or even start from scratch.  
+        This is my portfolio page containing weekly challanges and charts. My Project and GitHub links are listed above. Please visit the Project page after the end of the protfolio page.
     </h3>
 
     <!-- We're organising the page into sections, with each section containing a chart, title and a description -->
     <section>
         <div class="chart-description">
-            <h2>Challenge 1: Example Graph 1</h2>
+            <h2>Challenge 1: Embedding charts</h2>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-                As a first example, we're using a basic chart from our repo.
+                Example 1
             </p>
         </div>
         <figure id="Location1"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
@@ -95,23 +94,21 @@
 
 <section>
     <div class="chart-description">
-        <h2>Example Graph 2</h2>
-        <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-            We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-            As a first example, we're using a basic chart from our repo.
+        <p> 
+           Example 2
         </p>
     </div>
-    <figure id="Location2"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+    <figure id="Location2"></figure> 
 </section>
 
 
 <script>
-    // This is a comment in JavaScript - it's a different language to HTML and CSS
+    
 
-    let figure_2_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/1/s1_chart1.json"; // We're storing the URL of the graph we want to display in a variable
-                                                                                                                // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+    let figure_2_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/1/s1_chart1.json"; 
+                                                                                                                
 
-    vegaEmbed('#Location2', figure_2_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+    vegaEmbed('#Location2', figure_2_spec) 
 
     </script>
 
@@ -120,23 +117,21 @@
 
 <section>
     <div class="chart-description">
-        <h2>Example Graph 3</h2>
-        <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-            We've organised the page into sections, with each section containing a chart, title and a description. Here, we can describe the chart and give some context.
-            As a first example, we're using a basic chart from our repo.
+        <p> 
+            Example 3
         </p>
     </div>
-    <figure id="Location3"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+    <figure id="Location3"></figure> 
 </section>
 
 
 <script>
-    // This is a comment in JavaScript - it's a different language to HTML and CSS
+    
 
-    let figure_3_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/1/s1_chart2.json"; // We're storing the URL of the graph we want to display in a variable
-                                                                                                                // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+    let figure_3_spec = "https://raw.githubusercontent.com/EconomicsObservatory/courses/main/1/s1_chart2.json"; 
+                                                                                                                
 
-    vegaEmbed('#Location3', figure_3_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+    vegaEmbed('#Location3', figure_3_spec) 
 
     </script>
 
@@ -146,25 +141,24 @@
 <section>
     <div class="chart-description">
         <h2>Challenge 2: Edited Graph 1</h2>
-        <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+        <p> 
             The Following graphs are created in Economic Observatory Data Hub.
         </p>
-        <p2>Weekly wage in Canada 2000-2024
-
+        <p2>
+            Weekly wage in Canada 2000-2024
         </p2>
     </div>
-    <figure id="Location4"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+    <figure id="Location4"></figure> 
 </section>
 
 
 <script>
-    // This is a comment in JavaScript - it's a different language to HTML and CSS
+    
 
-    let figure_4_spec = "week2.json"; // We're storing the URL of the graph we want to display in a variable
-                                                                                                                // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+    let figure_4_spec = "week2.json"; 
+                                                                                                                
 
-    vegaEmbed('#Location4', figure_4_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
-
+    vegaEmbed('#Location4', figure_4_spec) 
     </script>
 
 
@@ -173,21 +167,21 @@
 <section>
     <div class="chart-description">
         <h2>Edited Graph 2</h2>
-        <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+        <p> 
             Unemployment rate in France 1975-2023
         </p>
     </div>
-    <figure id="Location5"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+    <figure id="Location5"></figure> 
 </section>
 
 
 <script>
-    // This is a comment in JavaScript - it's a different language to HTML and CSS
+    
 
-    let figure_5_spec = "week2(1).json"; // We're storing the URL of the graph we want to display in a variable
-                                                                                                                // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+    let figure_5_spec = "week2(1).json"; 
+                                                                                                                
 
-    vegaEmbed('#Location5', figure_5_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+    vegaEmbed('#Location5', figure_5_spec) 
 
     </script>
 
@@ -197,21 +191,21 @@
 <section>
     <div class="chart-description">
         <h2>Challenge 3: Supporting arguments</h2>
-        <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+        <p> 
             One of the arguments at the inequality talk: there is an increase in education level but falling in-work trainings and very few job opportunities for those who have not studied in university.
         </p>
     </div>
-    <figure id="Location6"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+    <figure id="Location6"></figure> 
 </section>
 
 
 <script>
-    // This is a comment in JavaScript - it's a different language to HTML and CSS
+    
 
-    let figure_6_spec = "week3.json"; // We're storing the URL of the graph we want to display in a variable
-                                                                                                                // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
+    let figure_6_spec = "week3.json"; 
+                                                                                                                
 
-    vegaEmbed('#Location6', figure_6_spec) // We're using the vegaEmbed function to put a graph in the element with id figure_1
+    vegaEmbed('#Location6', figure_6_spec) 
 
     </script>
 
@@ -234,6 +228,171 @@
     let figure_7_spec = "week3(1).json"
 
     vegaEmbed('#Location7', figure_7_spec)
+</script>
+
+
+
+
+<section>
+    <div class="chart-description">
+        <h2>Challenge 4: Improve someone else's chart</h2>
+        <p> 
+            The following is a chart found online showing the number of active players in Minecraft.
+        </p>
+    </div>
+
+    <img src="cc4(chart).png">
+</section>
+
+<section>
+    <p>
+        Below is the chart I recreated using vega editor. I added a proper title (and subtitle), and renamed the x/y axis. I then flipped the sequence of the displayed "year", which makes it easier to read. Lastly, I recoloured the bar into a sharper colour to catch readers' attention.
+    </p>
+    <figure id="Location8"></figure> 
+</section>
+
+<script>
+    let figure_8_spec = "week4.json"
+
+    vegaEmbed('#Location8', figure_8_spec)
+</script>
+
+
+
+
+<section>
+    <div class="chart-description">
+        <h2>Challenge 5: Scraping with Google colab</h2>
+        <p> 
+            Scraping website : <a href="https://colab.research.google.com/drive/17F7DL1EitaemcOoVedLdNQBao702RyFU?usp=sharing">google colab link</a>
+        </p>
+    </div>
+
+</section>
+
+<section>
+    <p>
+        I used Wikipedia for the estimated gdp per capita data, since it is the most convenient way and friendly for my first time doing website scraping. Below is a bar chart from scraping.
+    </p>
+    <figure id="Location9"></figure> 
+</section>
+
+<script>
+    let figure_9_spec = "week5.json"
+
+    vegaEmbed('#Location9', figure_9_spec)
+</script>
+
+
+</section>
+
+<section>
+    <div class="chart-description">
+        <h2>Challenge 7: Map</h2>
+        <p> 
+            The following is a map of UK, showing the populatiion of the 10 selected cities.
+        </p>
+        <figure id="Location11"></figure> 
+    </div>
+
+</section>
+
+<script>
+    let figure_11_spec = "week7.json"
+
+    vegaEmbed('#Location11', figure_11_spec)
+</script>
+
+
+<section>
+    <div class="chart-description">
+        <h2>Challenge 8: Analytic charts</h2>
+        <p> 
+            The following charts are a scatter plot and a bubble plot. (data used: US inflation rate 2020-2024)
+        </p>
+        <figure id="Location12"></figure> 
+    </div>
+
+</section>
+
+<script>
+    let figure_12_spec = "week8.json"
+
+    vegaEmbed('#Location12', figure_12_spec)
+</script>
+
+<section>
+
+    <figure id="Location13"></figure> 
+    
+</section>
+
+<script>
+    let figure_13_spec = "week8(1).json"
+
+    vegaEmbed('#Location13', figure_13_spec)
+</script>
+
+
+<section>
+    <div class="chart-description">
+        <h2>Challenge 9: Big data</h2>
+        <p> 
+            Here are two charts about the beer price of UK (2003-2024)
+        </p>
+        <figure id="Location14"></figure>
+    </div>
+</section>
+
+<script>
+    let figure_14_spec = "week9.json"
+
+    vegaEmbed('#Location14', figure_14_spec)
+</script>
+
+<section>
+    <p>The charts are divided into many regions with different colours. The first chart being able to highlight the selected line and show the tooltip for it. While the second chart has enhanced options, including a year selector, and will only show the hovered line.</p>
+
+    <figure id="Location15"></figure> 
+    
+</section>
+
+<script>
+    let figure_15_spec = "week9(1).json"
+
+    vegaEmbed('#Location15', figure_15_spec)
+</script>
+
+
+
+
+<section>
+    <div class="chart-description">
+        <h2>Challenge 10: Interactive charts</h2>
+        <p> 
+            The following are 2 interactive charts: colour changer and year selector
+        </p>
+        <figure id="Location16"></figure> 
+    </div>
+
+</section>
+
+<script>
+    let figure_16_spec = "week10.json"
+
+    vegaEmbed('#Location16', figure_16_spec)
+</script>
+
+<section>
+
+    <figure id="Location17"></figure> 
+    
+</section>
+
+<script>
+    let figure_17_spec = "week10(1).json"
+
+    vegaEmbed('#Location17', figure_17_spec)
 </script>
 </body>
     

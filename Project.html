@@ -3,9 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Styled Page</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #216cdd;
+            text-align: center;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: left;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
 </head>
 <body>
-    sdfghjkl
+    <div class="container">
+        <h1>How has covid-19 affected the soft drink industry in the US?</h1>
+        <p><em>Did they suffer from the pandemic or perhaps benefited from it?</em></p>
+        <p style="margin-top: 0px; color: darkblue">
+            
+            <a href="https://jonathan123-web.github.io/">Protfolio</a> | <a
+                href="https://github.com/Jonathan123-web/Jonathan123-web.github.io">GitHub</a>
+        </p>
+    </div>
+    <footer></footer>
+
+
+    <section>
+        <div class="chart-description">
+            <h2>Aim of project</h2>
+            <p> 
+                In this project, we investigate how COVID-19 pandemic has impacted the soft drink industry in the US. There are a lot of changes in sales, consumer behaviour, and new challenges for production. The pandemic caused disruptions in our daily lives, changing our consumption behaviour due to mass lockdowns and social distancing policies. This leads to an increase in “at-home-consumption”, for example, online shopping, take-aways from restaurants. These actions could significantly affect the soft drink industry, as well as every industry else. By analyzing sales/revenues, and consumer trends in the US, we can understand the change in the performance of the soft industry during Covid-19 pandemic. We want to know whether the pandemic has caused a downturn in the industry or perhaps the other way round. Firstly, let us familiarize with the soft drink industry in the US. 
+            </p>
+            <p2>chart 1 - soft drinks market share in the US</p2>
+        </div>
+        <figure id="Location1"></figure> 
+    </section>
+
+    <script>
+    
+
+        let figure_1_spec = "pc1.json"; 
+                                                                                                                    
+    
+        vegaEmbed('#Location1', figure_1_spec) 
+        </script>
+
+        <section>
+            <div class="chart-description">
+                <h2></h2>
+                <p></p>
+                <p2>chart 2 - Coca Cola revenue</p2>
+            </div>
+            <figure id="Location2"></figure>
+        </section>
+
+        <script>
+    
+
+            let figure_2_spec = "pc2.json"; 
+                                                                                                                        
+        
+            vegaEmbed('#Location2', figure_2_spec) 
+            </script>
+    
+    <section>
+        <div class="chart-description">
+            <h2></h2>
+            <p></p>
+            <p2>chart 3 - Overall soft drinks sales in US</p2>
+        </div>
+        <figure id="Location3"></figure>
+    </section>
+
+    <script>
+
+
+        let figure_3_spec = "pc3.json"; 
+                                                                                                                    
+    
+        vegaEmbed('#Location3', figure_3_spec) 
+        </script>
+
+<section>
+    <div class="chart-description">
+        <h2></h2>
+        <p></p>
+        <p2>chart 4 - Soft drink revenue per capita (at-home-consumption vs out-of-home)</p2>
+    </div>
+    <figure id="Location4"></figure>
+</section>
+
+<script>
+
+
+    let figure_4_spec = "pc4.json"; 
+                                                                                                                
+
+    vegaEmbed('#Location4', figure_4_spec) 
+    </script>
+
+
+<section>
+    <div class="chart-description">
+        <h2>Data, Charts, and Automation</h2>
+        <p> 
+            The data sets used in the project are mostly from 2018-2023, which shrinks into years around the pandemic. We then could have a greater idea of how the market has changed, since it is easier to compare between years next to each other. All the data sources are from public reports, online government data sets, and soft drinks specific data from Statista. The data used include market share of soft drinks industry in the US, Coca cola annual sales, combined sales from all soft drinks companies, and consumer soft drink consumption behaviours.
+        </p>
+    </div>
+    
+</section>
+
+<section>
+    <div class="chart-description">
+        <h2></h2>
+        <p> 
+            All data for the project were created and visualized with tools such as Vega-Lite, Python (panda), Excel (csv files). With these tools, I was able to create clear and interactive charts address our main focus of the project. Similarly, automation also played a critical role. I have used python scripts to scrape away the unwanted data sets on websites, then cleaning and processing them into csv files to make charts with Vega-Lite. This reduced the possibility of having errors when importing data. Thus, provided clear overview of changes, efficiently and accurately.
+        </p>
+    </div>
+    
+</section>
+
+<section>
+    <div class="chart-description">
+        <h2>Challenges and tools</h2>
+        <p> 
+            When I am doing this project, I encountered several challenges. For instance, there are lots of incomplete and inconsistent data across different sources. Some data sets lacked detailed breakdowns by region or category, and some contained missing data which I had to search on different websites to manually input them. Visualizing these complex and massive trends also proved difficulties, as some patterns were not easily reproduced. To address these issues, I tried the website tool introduced in class, Python Panda. Its library can be used for advanced data cleaning, and to handle inconsistencies of data sets. Although I still faces trouble when using python codes, I managed to learn to correctly code them with the help of some videos online.
+        </p>
+    </div>
+    
+</section>
+
+<section>
+    <div class="chart-description">
+        <h2></h2>
+        <p> 
+            On top of that, the creation of charts was also disastrous since this is the very first time of me getting my hands on coding them. I often faced issues when coding, for example, interactive functions (time-series selection). Luckily, I was able to find solutions with Vega-Lite itself. The website offers a large variety of examples, from bar/line charts to interactive maps. With that, I could use them as a reference to code my own custom charts and interactive visualizations. This helped present the soft drink market trends clearly. 
+        </p>
+    </div>
+</section>
+
+    <section>
+        <div class="chart-description">
+            <h2></h2>
+            <p> 
+                Despite these hurdles, I now acquire the ability to make use of these tools to create professional and insightful charts. Overcoming these challenges through learning step by step had enhanced the project's overall quality and readability for the audience.
+            </p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="chart-description">
+            <h2>Conclusion</h2>
+            <p> 
+                Just by looking at chart2, chart3, and chart4, we have an interesting result. It shows that the soft drink market in the US had a significant growth during and after Covid-19 pandemic. According to chart4, out-of-home consumption had declined sharply due to lockdowns, for instance, closures of restaurants, entertainment venues, parties and other public spaces.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="chart-description">
+            <h2></h2>
+            <p> 
+                Despite the decrease of out-of-home consumption, companies quickly adapted to new methods, like e-commerce, grocery sales. This idea can be supported by the blue line in chart4, which we can clearly see an increase from 2019. Companies like Coca Cola and Pepsi had come up with new product innovations during pandemic periods, since the increase in demand for variety of snack food. The Covid-19 pandemic also raised the awareness of healthy food and drinks. This led to a shift in consumer priorities, like the interest in a less unhealthy kind of soft drinks. Companies acted fast and were able to catch up to the market trend. 
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="chart-description">
+            <h2></h2>
+            <p> 
+                Although the supply chain was disrupted which changed market dynamics, the industry was able to leverage data insights and provide strategies to meet evolving demands. Apart from acknowledging about the changes in soft drink market, this project also highlights the importance of adaptability and well planning, navigate crises effectively by understanding and responding to consumer needs. With the pandemic slowly out of the way, the soft drink industry in US is predicted to have a continuous growth in the future.
+            </p>
+        </div>
+    </section>
 </body>
 </html>

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A bar chart that sorts the y-values by the x-values.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jonathan123-web/Jonathan123-web.github.io/refs/heads/main/gdp_estimate_by_country.csv"
+  },
+  "title": {"text": "Estimated GDP per capita by country (2022)"},
+  "width": 300,
+  "height": 1800,
+  "mark": "bar",
+  "encoding": {
+    "y": {"field": "Country", "type": "ordinal", "sort": "-x"},
+    "x": {
+      "aggregate": "sum",
+      "field": "Estimate",
+      "title": "Estimated GDP per capita ($)"
+    }
+  },
+  "config": {}
+}

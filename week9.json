@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Beer Prices by Region (2003-2024)",
+  "width": 300,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jonathan123-web/Jonathan123-web.github.io/refs/heads/main/beer_prices_by_region.csv"
+  },
+  "selection": {
+    "highlight": {
+      "type": "single",
+      "on": "mouseover",
+      "empty": "none",
+      "fields": ["id"]
+    }
+  },
+  "mark": "line",
+  "encoding": {
+    "x": {"field": "year", "type": "quantitative", "title": "Year"},
+    "y": {
+      "field": "price",
+      "type": "quantitative",
+      "title": "Beer Price (GBP)"
+    },
+    "color": {
+      "field": "id",
+      "type": "nominal",
+      "title": "Region",
+      "condition": {"selection": "highlight", "value": "red"}
+    },
+    "size": {"condition": {"selection": "highlight", "value": 4}, "value": 2},
+    "tooltip": [
+      {"field": "year", "type": "quantitative", "title": "Year"},
+      {"field": "id", "type": "nominal", "title": "Region"},
+      {"field": "price", "type": "quantitative", "title": "Price (GBP)"}
+    ]
+  },
+  "config": {}
+}

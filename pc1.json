@@ -1,0 +1,37 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Pie chart representing market share of soft drink brands in 2020, USA.",
+  "title": "Soft Drink Market Share (%) in the USA (2020)",
+
+  "width":350,
+  "height": 350,
+
+  "data": {
+    "values": [
+      {"brand": "Coca Cola", "market_share": 19.5},
+      {"brand": "Dr. Pepper", "market_share": 8},
+      {"brand": "Pepsi", "market_share": 8.7},
+      {"brand": "Sprite", "market_share": 7.8},
+      {"brand": "Diet Coke", "market_share": 7.9}
+    ]
+  },
+  "mark": {"type": "arc", "tooltip": true},
+  "encoding": {
+    "theta": {
+      "field": "market_share",
+      "type": "quantitative",
+      "title": "Market Share (%)"
+    },
+    "color": {"field": "brand", "type": "nominal", "title": "Brand"},
+    "tooltip": [
+      {"field": "brand", "type": "nominal", "title": "Brand"},
+      {
+        "field": "market_share",
+        "type": "quantitative",
+        "title": "Market Share (%)"
+      }
+    ]
+  },
+  "view": {"stroke": "transparent"},
+  "config": {}
+}

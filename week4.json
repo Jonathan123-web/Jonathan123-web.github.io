@@ -1,0 +1,26 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Minecraft active player count",
+    "subtitle": ["2018-2024(Sep) in million"]
+  },
+  "width": 400,
+  "height": 300,
+  "data": {
+    "values": [
+      {"year": "2018", "player (million)": 75},
+      {"year": "2019", "player (million)": 91},
+      {"year": "2020", "player (million)": 115},
+      {"year": "2021", "player (million)": 144},
+      {"year": "2022", "player (million)": 170},
+      {"year": "2023", "player (million)": 172},
+      {"year": "2024", "player (million)": 173}
+    ]
+  },
+  "mark": {"type": "bar", "color": "#53dfbe"},
+  "encoding": {
+    "x": {"field": "year", "type": "nominal", "axis": {"labelAngle": 0}},
+    "y": {"field": "player (million)", "type": "quantitative"}
+  },
+  "config": {}
+}

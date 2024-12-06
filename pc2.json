@@ -1,0 +1,73 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Coca-Cola Global Revenue ($ Billion) 2013-2023",
+
+  "width": 350,
+  "height": 350,
+  
+  "data": {
+    "values": [
+      {"year": 2013, "revenue": 46854},
+      {"year": 2014, "revenue": 45998},
+      {"year": 2015, "revenue": 44294},
+      {"year": 2016, "revenue": 41863},
+      {"year": 2017, "revenue": 36212},
+      {"year": 2018, "revenue": 34300},
+      {"year": 2019, "revenue": 37266},
+      {"year": 2020, "revenue": 33014},
+      {"year": 2021, "revenue": 38655},
+      {"year": 2022, "revenue": 43004},
+      {"year": 2023, "revenue": 45754}
+    ]
+  },
+  "layer": [
+    {
+      "mark": "line",
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative",
+          "title": "Year"
+        },
+        "y": {
+          "field": "revenue",
+          "type": "quantitative",
+          "title": "Revenue ($ Billion)"
+        },
+        "tooltip": [
+          {"field": "year", "title": "Year"},
+          {"field": "revenue", "title": "Revenue ($ Billion)"}
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 100,
+        "color": "red"
+      },
+      "encoding": {
+        "x": {
+          "field": "year",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "revenue",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {"field": "year", "title": "Year"},
+          {"field": "revenue", "title": "Revenue ($ Billion)"}
+        ]
+      },
+      "selection": {
+        "hover": {
+          "type": "single",
+          "fields": ["year"],
+          "on": "mouseover",
+          "empty": "none"
+        }
+      }
+    }
+  ]
+}

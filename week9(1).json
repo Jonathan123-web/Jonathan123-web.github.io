@@ -1,0 +1,65 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Beer Prices by Region",
+    "subtitle": "Price (GBP)",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 400,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/Jonathan123-web/Jonathan123-web.github.io/refs/heads/main/beer_prices_by_region.csv"
+  },
+  "params": [
+    {
+      "name": "minYear",
+      "value": 2003,
+      "bind": {"input": "text", "name": "Start year: "}
+    },
+    {
+      "name": "maxYear",
+      "value": 2024,
+      "bind": {"input": "text", "name": "End year: "}
+    }
+  ],
+  "selection": {
+    "highlight": {
+      "type": "single",
+      "on": "mouseover",
+      "empty": "none",
+      "fields": ["id"]
+    }
+  },
+  "transform": [
+    {"filter": "datum.year >= minYear"},
+    {"filter": "datum.year <= maxYear"}
+  ],
+  "mark": {
+    "type": "line",
+    "color": "#00BFFF",
+    "strokeWidth": 2,
+    "opacity": 0.7
+  },
+  "encoding": {
+    "x": {"field": "year", "type": "quantitative", "title": "Year"},
+    "y": {
+      "field": "price",
+      "type": "quantitative",
+      "title": "Beer Price (GBP)"
+    },
+    "color": {"field": "id", "type": "nominal", "title": "Region"},
+    "opacity": {
+      "condition": {"selection": "highlight", "value": 1},
+      "value": 0.2
+    },
+    "tooltip": [
+      {"field": "year", "type": "quantitative", "title": "Year"},
+      {"field": "id", "type": "nominal", "title": "Region"},
+      {"field": "price", "type": "quantitative", "title": "Price (GBP)"}
+    ]
+  },
+  "config": {}
+}
